@@ -29,4 +29,3 @@ class PolicyDecision:
     reason: str
     trace: list[Mapping[str, Any]]
     policy_version: int
-    class_up: int
