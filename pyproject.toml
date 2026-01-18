@@ -1,0 +1,62 @@
+[project]
+name = "nexus-forge"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.13"
+dependencies = []
+
+[dependency-groups]
+dev = [
+    "mypy>=1.19.1",
+    "pre-commit>=4.5.1",
+    "pytest>=9.0.2",
+    "ruff>=0.14.13",
+]
+
+[tool.ruff]
+line-length = 100
+target-version = "py313"
+exclude = ["tests"]
+
+#todo: set this path
+src = ["nexus_forge"]
+
+[tool.ruff.lint]
+select = [
+  "E", "F",   # pycodestyle + pyflakes
+  "I",        # import sorting
+  "B",        # bugbear
+  "UP",       # pyupgrade
+  "N",        # naming
+  "SIM",      # simplify
+  "ARG"       # unused args
+]
+ignore = [
+  "E501"      # let formatter manage line length
+]
+
+[tool.ruff.lint.per-file-ignores]
+"tests/**" = ["S101"]  # if you later enable security rules and want asserts in tests
+
+[tool.ruff.format]
+quote-style = "double"
+indent-style = "space"
+
+[tool.mypy]
+python_version = "3.13"
+strict = true
+warn_unused_configs = true
+warn_return_any = true
+warn_unused_ignores = true
+no_implicit_optional = true
+show_error_codes = true
+pretty = true
+exclude = ["tests"]
+
+# If you use a src/ layout: todo: set this path
+mypy_path = "nexus_forge"
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-q"

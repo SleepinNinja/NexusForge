@@ -1,0 +1,20 @@
+{
+    "words": [
+        "addopts",
+        "eventhub",
+        "flowforge",
+        "mypy",
+        "nexusforge",
+        "pluginkit",
+        "policyengine",
+        "pycodestyle",
+        "pyflakes",
+        "pytest",
+        "pyupgrade",
+        "replayable",
+        "testpaths",
+        "venv"
+    ],
+    "enableFiletypes": ["python", "markdown", "!yaml"],
+    "useGitignore": true
+}

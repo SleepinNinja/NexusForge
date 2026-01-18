@@ -1,0 +1,19 @@
+{
+  "python.defaultInterpreterPath": ".venv/bin/python",
+  "python.analysis.typeCheckingMode": "strict",
+  "python.analysis.diagnosticMode": "workspace",
+
+  "editor.formatOnSave": true,
+  "editor.codeActionsOnSave": {
+    "source.fixAll": "always",
+    "source.organizeImports": "always"
+  },
+
+  "ruff.enable": true,
+  "ruff.organizeImports": true,
+  "editor.fontSize": 11.5,
+  "terminal.integrated.fontSize": 11.5,
+  "window.zoomLevel": -0.6,
+  "better-comments.multilineComments": true,
+  "python.analysis.ignore": ["**/tests/**"]
+}
